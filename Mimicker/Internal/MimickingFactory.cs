@@ -5,7 +5,7 @@ namespace Mimicker.Internal
     /// <summary>
     /// Factory to create mimics
     /// </summary>
-    public class MimicFactory : IMimicFactory
+    public class MimickingFactory : IMimickingFactory
     {
         /// <summary>
         /// Create a mimic for the given interface.
