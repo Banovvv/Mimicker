@@ -7,6 +7,13 @@ namespace Mimicker.Internal
     /// </summary>
     public class MimickingFactory : IMimickingFactory
     {
+        private readonly IMimickingStateFactory _stateFactory;
+
+        public MimickingFactory(IMimickingStateFactory stateFactory)
+        {
+            _stateFactory = stateFactory;
+        }
+
         /// <summary>
         /// Create a mimic for the given interface.
         /// </summary>
@@ -14,6 +21,7 @@ namespace Mimicker.Internal
         /// <returns>A mimic implementing the specified interface type.</returns>
         public object Initialize(Type type)
         {
+            var mockingState = _stateFactory.Initialize(this);
             throw new NotImplementedException();
         }
     }

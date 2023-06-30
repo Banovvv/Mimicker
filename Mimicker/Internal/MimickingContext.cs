@@ -7,11 +7,16 @@ namespace Mimicker.Internal
     {
         public static IMimickingContext Context { get; }
 
-        public IMimickingFactory MimickingFactory => throw new NotImplementedException();
+        public IMimickingFactory MimickingFactory { get; }
 
         static MimickingContext()
         {
             Context = DefaultMimickingFactory.InitializeMimickingContext();
+        }
+
+        public MimickingContext(IMimickingFactory mimickingFactory)
+        {
+            MimickingFactory = mimickingFactory;
         }
     }
 }

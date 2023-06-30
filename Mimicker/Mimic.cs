@@ -1,4 +1,6 @@
-﻿namespace Mimicker
+﻿using Mimicker.Internal;
+
+namespace Mimicker
 {
     /// <summary>
     /// <para>Create a mimic for a specified type.</para>
@@ -12,9 +14,7 @@
         /// <param name="type">The type of interface to mimic.</param>
         /// <returns>A mimic implementing the specified interface type.</returns>
         public static object This(Type type)
-        {
-            throw new NotImplementedException();
-        }
+            => MimickingContext.Context.MimickingFactory.Initialize(type);
 
         /// <summary>
         /// Mimic for an interface.
