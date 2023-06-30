@@ -1,4 +1,5 @@
 ﻿using Mimicker.Internal.Abstractions;
+using Mimicker.Internal.Factories;
 
 namespace Mimicker.Internal
 {
@@ -10,8 +11,7 @@ namespace Mimicker.Internal
 
         static MimickingContext()
         {
-            throw new NotImplementedException();
-            // Context = ?
+            Context = DefaultMimickingFactory.InitializeMimickingContext();
         }
     }
 }

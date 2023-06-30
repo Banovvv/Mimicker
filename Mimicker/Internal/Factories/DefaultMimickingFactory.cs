@@ -8,11 +8,12 @@ namespace Mimicker.Internal.Factories
 
         public static IMimickingContext InitializeMimickingContext()
         {
+            throw new NotImplementedException();
         }
 
         private static IMimickingContainer InitializeContainer()
         {
-
+            throw new NotImplementedException();
         }
     }
 }
